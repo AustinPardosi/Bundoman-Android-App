@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Transaksi"
+        android:id="@+id/transaksi"
+        android:icon="@drawable/baseline_list_alt_24"/>
+    <item android:title="Scan"
+        android:id="@+id/scan"
+        android:icon="@drawable/baseline_document_scanner_24"/>
+    <item android:title="Twibbon"
+        android:id="@+id/twibbon"
+        android:icon="@drawable/baseline_camera_24"/>
+    <item android:title="Grafik"
+        android:id="@+id/grafik"
+        android:icon="@drawable/baseline_bar_chart_24"/>
+    <item android:title="Pengaturan"
+        android:id="@+id/pengaturan"
+        android:icon="@drawable/baseline_app_settings_alt_24"/>
+</menu>

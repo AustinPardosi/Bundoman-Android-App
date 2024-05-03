@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BundoMan</string>
+    <string name="title_activity_edit_transaksi">editTransaksiActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="no_internet">Tidak tersambung ke internet</string>
+    <string name="no_internet_short">No internet</string>
+    <string name="authorities">com.example.bundoman.provider</string>
+    <string name="temp_images_dir">temp_images</string>
+    <string name="temp_image">temp_image.jpg</string>
+    <string name="send_bill">Kirim Bill</string>
+    <string name="item_list_title">Daftar Item</string>
+    <string-array name="transaction_categories">
+        <item>Pemasukan</item>
+        <item>Pengeluaran</item>
+    </string-array>
+</resources>

@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\fragment_twibbon.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\fragment_twibbon.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\item_list.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\item_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\fragment_grafik.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\fragment_grafik.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\activity_dashboard.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\activity_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\fragment_pengaturan.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\fragment_pengaturan.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\activity_edit_transaksi.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\activity_edit_transaksi.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\activity_no_internet.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\activity_no_internet.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\list_transaksi.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\list_transaksi.xml"
+    },
+    {
+        "merged": "com.example.bundoman.app-mergeDebugResources-83:/layout/popup_bill.xml",
+        "source": "com.example.bundoman.app-main-86:/layout/popup_bill.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\fragment_scan.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\fragment_scan.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\popup_bill.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\popup_bill.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\activity_add_transaksi.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\activity_add_transaksi.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-mergeDebugResources-83:\\layout\\fragment_transaksi.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.bundoman.app-main-86:\\layout\\fragment_transaksi.xml"
+    }
+]

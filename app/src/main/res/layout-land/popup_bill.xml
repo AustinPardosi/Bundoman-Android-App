@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_light_background"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="103dp">
+
+        <Button
+            android:id="@+id/ulangBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="44dp"
+            android:text="Ulang"
+            app:layout_constraintStart_toEndOf="@+id/simpanBill"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+        <Button
+            android:id="@+id/simpanBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="44dp"
+            android:text="Simpan"
+            app:layout_constraintStart_toEndOf="@+id/itemList"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+        <Spinner
+            android:id="@+id/category_scan"
+            android:layout_width="316dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toEndOf="@+id/itemList"
+            app:layout_constraintTop_toBottomOf="@+id/itemListTitle" />
+
+        <TextView
+            android:id="@+id/itemListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/item_list_title"
+            android:text="@string/item_list_title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemList"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemListTitle" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/location"
+            android:layout_width="315dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/itemList"
+            app:layout_constraintTop_toBottomOf="@+id/category_scan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/location_edit_text_scan"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:hint="Lokasi" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

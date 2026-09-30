@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="applogo_background">#FFFFFF</color>
+    <color name="black">#FF111111</color>
+    <color name="gray">#FF808080</color>
+    <color name="orange">#FFFFFF55</color>
+    <color name="red">#FF880808</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFFEA419</color>
+</resources>

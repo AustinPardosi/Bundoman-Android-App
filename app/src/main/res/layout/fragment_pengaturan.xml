@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/simpanButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Simpan daftar transaksi"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:gravity="start|center_vertical"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="-0"
+        android:textSize="20sp" />
+
+    <!-- Horizontal Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/kirimButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Kirim daftar transaksi"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:gravity="start|center_vertical"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="-0"
+        android:textSize="20sp"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <Button
+        android:id="@+id/randomizeButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Acak transaksi"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:gravity="start|center_vertical"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="-0"
+        android:textSize="20sp"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/logoutButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/inter"
+        android:gravity="start|center_vertical"
+        android:letterSpacing="-0"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/red"
+        android:textSize="20sp" />
+
+</LinearLayout>

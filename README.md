@@ -1,142 +1,175 @@
-# IF3210-2024-Android-YGY
+<div align="center">
 
-## Deskripsi
+<img src="app/src/main/applogo-playstore.png" alt="BondoMan logo" width="120" />
 
-Bundoman merupakan sebuah aplikasi Android manajemen uang. Pengguna dapat melakukan penambahan, pengubahan, dan penghapusan transaksi.Pengguna juga dapat melihat daftar transaksi yang sudah dilakukan, serta melakukan scan nota. Setelah itu, pengguna dapat melihat graf rangkuman transaksi dan menyimpan daftar transaksi dalam format .xlsx pada halaman pengaturan.
+# BondoMan
 
-Pembuatan Aplikasi Bundoman ditujukan untuk memenuhi Tugas Besar 1 IF3210 - Pengembangan Aplikasi pada Platform Khusus
+**Transaction logging for raw material trades, built natively for Android.**
 
-## Library
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![SQLite](https://img.shields.io/badge/Room%20%2F%20SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 
-Berikut adalah library yang kami gunakan untuk membangun Aplikasi Bundoman
+![Min SDK](https://img.shields.io/badge/min%20SDK-26-blue?style=flat-square)
+![Target SDK](https://img.shields.io/badge/target%20SDK-34-blue?style=flat-square)
+![OWASP](https://img.shields.io/badge/OWASP-M4%20%7C%20M8%20%7C%20M9-black?style=flat-square&logo=owasp)
 
-- Core KTX: `androidx.core:core-ktx`
-- AppCompat: `androidx.appcompat:appcompat`
-- Material Components: `com.google.android.material:material`
-- Activity KTX: `androidx.activity:activity-ktx`
-- ConstraintLayout: `androidx.constraintlayout:constraintlayout`
-- RecyclerView: `androidx.recyclerview:recyclerview:1.3.0`
-- Lifecycle Runtime KTX: `androidx.lifecycle:lifecycle-runtime-ktx`
-- Navigation Fragment KTX: `androidx.navigation:navigation-fragment-ktx`
-- Navigation UI KTX: `androidx.navigation:navigation-ui-ktx`
-- Room Runtime: `androidx.room:room-runtime:2.6.1`
-- Room Compiler: `androidx.room:room-compiler:2.6.1`
-- Room KTX: `androidx.room:room-ktx:2.6.1`
-- Room Common: `androidx.room:room-common:2.6.1`
-- Room Testing: `androidx.room:room-testing:2.6.1`
-- Coroutines Android: `org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0`
-- Coroutines Core: `org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0`
-- Camera Core: `androidx.camera:camera-core:1.1.0-alpha06`
-- Camera Camera2: `androidx.camera:camera-camera2:1.1.0-alpha06`
-- Camera Lifecycle: `androidx.camera:camera-lifecycle:1.1.0-alpha06`
-- Camera View: `androidx.camera:camera-view:1.0.0-alpha26`
-- Apache POI: `org.apache.poi:poi:5.2.2`
-- Apache POI OOXML: `org.apache.poi:poi-ooxml:5.2.2`
-- Retrofit: `com.squareup.retrofit2:retrofit:2.9.0`
-- Retrofit Converter Moshi: `com.squareup.retrofit2:converter-moshi:2.9.0`
-- Moshi: `com.squareup.moshi:moshi:1.15.0`
-- Moshi Kotlin: `com.squareup.moshi:moshi-kotlin:1.15.0`
-- Work Runtime KTX: `androidx.work:work-runtime-ktx:2.9.0`
-- Play Services Location: `com.google.android.gms:play-services-location:18.0.0`
-- JUnit: `testImplementation`
-- AndroidX JUnit: `androidx.test.ext:junit`
-- Espresso Core: `androidx.test.espresso:espresso-core`
-- Compose Testing: `androidx.compose.ui:ui-test-junit4`
-- UI Tooling: `androidx.ui:ui-tooling`
-- UI Test Manifest: `androidx.ui:ui-test-manifest`
-- MPAndroidChart: `com.github.PhilJay:MPAndroidChart:v3.1.0`
+[About](#-about) •
+[Features](#-features) •
+[Screenshots](#-screenshots) •
+[Tech Stack](#%EF%B8%8F-tech-stack) •
+[Getting Started](#-getting-started) •
+[Security](#%EF%B8%8F-security-owasp-mobile-top-10) •
+[Team](#-team)
 
+</div>
 
-## Screenshot
-<table width="100%">
-  <tbody>
-    <tr>
-      <td width="1%"><img src="/screenshot/1.jpg"/></td>
-      <td width="1%"><img src="/screenshot/2.jpg"/></td>
-       <td width="1%"><img src="/screenshot/3.jpg"/></td>
-    </tr>
-    <tr>
-      <td width="1%"><img src="/screenshot/4.jpg"/></td>
-      <td width="1%"><img src="/screenshot/5.jpg"/></td>
-       <td width="1%"><img src="/screenshot/6.jpg"/></td>
-    </tr>
-    <tr>
-      <td width="1%"><img src="/screenshot/7.jpg"/></td>
-      <td width="1%"><img src="/screenshot/8.jpg"/></td>
-      <td width="1%"><img src="/screenshot/9.jpg"/></td>
-    </tr>
-  </tbody>
+---
+
+## 📖 About
+
+BondoMan is a transaction logging application designed for raw material trades, developed using Kotlin for native Android.
+
+Users can record income and expense transactions, scan receipts to log purchases automatically, review a summary chart, and export their records to Excel or send them by email. It was built as the first major project for **IF3210 – Platform-Specific Application Development**.
+
+## ✨ Features
+
+| | Feature | Description |
+| :---: | --- | --- |
+| 🔐 | **Authentication** | JWT login against the course backend. A background service watches token expiry and signs the user out when the session ends. |
+| 📒 | **Transaction management** | Create, edit, and delete income/expense entries, stored locally with Room. |
+| 📍 | **Location tagging** | The current city is filled in automatically using the fused location provider and the geocoder. |
+| 🧾 | **Receipt scanning** | Capture a receipt with the camera or pick one from the gallery, upload it, review the detected items, and save them as a transaction. |
+| 📊 | **Financial chart** | Pie chart comparing total income and total expenses. |
+| 📤 | **Excel export** | Save every transaction as `.xlsx` or `.xls` to the Downloads folder. |
+| ✉️ | **Email report** | Send the transaction list as an `.xlsx` attachment to the signed-in email address. |
+| 🎲 | **Randomize input** | A broadcast from Settings pre-fills the Add Transaction form with a random title and amount. |
+| 🖼️ | **Twibbon camera** | Live front-camera preview with a frame overlay, built on CameraX. |
+| 📶 | **Connectivity awareness** | Detects network loss and shows a snackbar or a dedicated No Internet screen. |
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="screenshot/1.jpg" width="220" /><br /><sub><b>Splash</b></sub></td>
+    <td align="center"><img src="screenshot/2.jpg" width="220" /><br /><sub><b>Login</b></sub></td>
+    <td align="center"><img src="screenshot/3.jpg" width="220" /><br /><sub><b>Transactions</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshot/4.jpg" width="220" /><br /><sub><b>Add Transaction</b></sub></td>
+    <td align="center"><img src="screenshot/5.jpg" width="220" /><br /><sub><b>Scan Receipt</b></sub></td>
+    <td align="center"><img src="screenshot/6.jpg" width="220" /><br /><sub><b>Scanned Items</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshot/7.jpg" width="220" /><br /><sub><b>Twibbon</b></sub></td>
+    <td align="center"><img src="screenshot/8.jpg" width="220" /><br /><sub><b>Chart</b></sub></td>
+    <td align="center"><img src="screenshot/9.jpg" width="220" /><br /><sub><b>Settings</b></sub></td>
+  </tr>
 </table>
 
-## Analisis dan Mitigasi Kerentanan OWASP
+## 🛠️ Tech Stack
 
-### M4: Insufficient Input/Output Validation
+| Area | Libraries |
+| --- | --- |
+| **Language** | Kotlin |
+| **UI** | AndroidX AppCompat, Material Components, ConstraintLayout, RecyclerView, View Binding |
+| **Persistence** | Room `2.6.1` |
+| **Networking** | Retrofit `2.9.0`, Moshi `1.15.0` |
+| **Concurrency** | Kotlin Coroutines |
+| **Camera** | CameraX `1.1.0-alpha06` |
+| **Location** | Google Play Services Location `18.0.0` |
+| **Charts** | MPAndroidChart `3.1.0` |
+| **Export** | Apache POI `5.2.2` |
+| **Testing** | JUnit, AndroidX Test, Espresso |
 
-**Definisi**
-Insufficient Input/Output Validation mengacu pada kegagalan aplikasi dalam memverifikasi, membersihkan, atau membatasi input dan output data dengan benar. Ini dapat menyebabkan sejumlah isu keamanan termasuk cross-site scripting (XSS), injection attacks, dan pengeksposan informasi sensitif. Input yang tidak divalidasi dari sumber yang tidak dipercaya dapat digunakan oleh penyerang untuk memanipulasi aplikasi dan mengakses atau menghancurkan data.
+### Project Structure
 
-**Cara Prevent**
+```
+app/src/main/java/com/example/bundoman/
+├── adapter/        # RecyclerView adapter for scanned receipt items
+├── models/         # API and domain models (User, Token, Item, Transaction)
+├── repository/     # Wrappers around the API services and the Room DAO
+├── room/           # Room database, entity, and DAO
+├── service/        # Retrofit interfaces and the JWT expiry service
+├── ui/             # List view model and the Twibbon fragment
+└── *.kt            # Activities and fragments (Dashboard, Login, Scan, Grafik, Pengaturan, …)
+```
 
-1. Validasi Input
-2. Sanitasi Data
-3. Encode Output
-4. Impplementasi Kontrol Tipe Data
-5. Penggunaan Parameterized Queries
-6. Error Handling yang Baik
+### Backend API
 
-**Perbaikan**
-Mekanisme perbaikan validasi input pada aplikasi meliputi peningkatan pada validasi email, password, judul, nominal, dan lokasi untuk meningkatkan keamanan dan integritas data. Untuk email, digunakan regex yang memastikan format email valid. Password diperkuat dengan regex untuk memenuhi kriteria tertentu, seperti keberadaan angka, huruf besar, dan karakter khusus, serta membatasi password dengan format khusus `password_{nim}`. Judul transaksi harus merupakan string yang tidak kosong dengan batasan panjang karakter yang wajar. Nominal harus berupa angka positif murni, divalidasi melalui regex yang memastikan hanya angka yang diperbolehkan, dan cek tambahan untuk memastikan nominal berada dalam rentang yang realistis. Lokasi divalidasi untuk hanya mengandung huruf alfabet dan spasi, menggunakan regex untuk mencegah input numerik atau karakter khusus.
+The app talks to `https://pbd-backend-2024.vercel.app`:
 
-| TOPIK            | SEBELUM                                                              | SESUDAH                                                              |
-| ---------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| LOGIN            | ![gambar sebelum](./screenshot/OWASP/m4-login-sebelum.png)           | ![gambar sesudah](./screenshot/OWASP/m4-login-sesudah.png)           |
-| Tambah Transaksi | ![gambar sebelum](./screenshot/OWASP/m4-tambahtransaksi-sebelum.png) | ![gambar sesudah](./screenshot/OWASP/m4-tambahtransaksi-sesudah.png) |
+| Method | Endpoint | Purpose |
+| :---: | --- | --- |
+| `POST` | `/api/auth/login` | Exchange email and password for a JWT |
+| `POST` | `/api/auth/token` | Read the token's expiry time |
+| `POST` | `/api/bill/upload` | Upload a receipt image and return the detected items |
 
-### M8: Security Misconfiguration
+## 🚀 Getting Started
 
-**Definisi**
-Security Misconfiguration adalah ketika aplikasi, database, server web, atau platform terkait tidak dikonfigurasi dengan tepat untuk keamanan. Ini terjadi ketika pengaturan keamanan tidak ditetapkan atau diimplementasikan dengan benar, default yang tidak aman dibiarkan, atau ketika konfigurasi yang tidak aman dapat diakses atau dieksploitasi. Misconfiguration dapat terjadi di berbagai level dari stack teknologi aplikasi, dan seringkali merupakan hasil dari pengaturan yang tidak lengkap, konfigurasi default, header HTTP yang tidak aman, pesan kesalahan yang mendetil, update server yang terlambat, dan sebagainya.
+### Prerequisites
 
-**Cara Prevent**
+- Android Studio Iguana (2023.2) or newer
+- JDK 17
+- An Android device or emulator running Android 8.0 (API 26) or later
 
-1. Pengaturan Keamanan yang Tepat
-2. Automasi Pengecekan Konfigurasi
-3. Prinsip Akses Terkecil
-4. Update dan Patching
-5. Environment Seperation
-6. Revew dan Audit Berkala
+### Installation
 
-**Perbaikan**
-Mekanisme perbaikan yang telah dilakukan adalah selalu meminta izin yang digunakan dalam aplikasi kami, termasuk Camera, dan berbagai akses penyimpanan dan lokasi, serta memastikan bahwa semua izin tersebut diperlukan. Kami juga mengetahui bahwa token yang digunakan sudah di enkripsi di backend untuk memastikan keamanan. Untuk pengelolaan sesi, kami telah mengimplementasikan mekanisme otomatis yang memeriksa token setiap lima menit dan logout pengguna jika token telah kedaluwarsa, serta memastikan permintaan dengan token kedaluwarsa ditolak oleh server.
+```bash
+git clone https://github.com/AustinPardosi/Bundoman-Android-App.git
+```
 
-| TOPIK            | JENIS    | Bukti                                                      |
-| ---------------- | -------- | ---------------------------------------------------------- |
-| Scan             | CAMERA   | ![gambar bukti](./screenshot/OWASP/m8-scan.jpg)            |
-| Twibbon          | CAMERA   | ![gambar bukti](./screenshot/OWASP/m8-twibbon.jpg)         |
-| Tambah Transaksi | LOCATION | ![gambar bukti](./screenshot/OWASP/m8-tambahtransaksi.jpg) |
+1. Open the project in Android Studio and let Gradle sync.
+2. Select a device or emulator.
+3. Click **Run ▶**.
 
-### M9: Insecure Data Storage
+Sign in with the account issued for the course backend. Passwords follow the format `password_<NIM>`.
 
-**Definisi**
-Insecure Data Storage merujuk pada kelemahan keamanan yang terjadi ketika data sensitif atau krusial disimpan tanpa enkripsi yang memadai atau perlindungan keamanan lainnya, sehingga berpotensi dapat diakses oleh aktor yang tidak berwenang seperti malware atau penyerang yang mendapatkan akses fisik ke perangkat. Data yang dimaksud bisa berupa kredensial pengguna, data personal, log transaksi, atau informasi keuangan yang jika bocor bisa mengakibatkan pencurian identitas, fraud keuangan, dan pelanggaran privasi.
+## 🛡️ Security (OWASP Mobile Top 10)
 
-**Cara Prevent**
+The app was reviewed against three risks from the OWASP Mobile Top 10.
 
-1. Gunakan Enkripsi yang Kuat
-2. Hindari Penyimpanan Data Sensitif
-3. Security by Design
-4. Data Obfuscation
-5. Access Controls
-6. Regular Security Audits
-7. Use Secure Containers
+### M4 · Insufficient Input/Output Validation
 
-**Perbaikan**
-Dalam meningkatkan keamanan penyimpanan data aplikasi, kami telah menerapkan serangkaian perbaikan yang memfokuskan pada validasi input, penggunaan Room Database, dan keamanan file. Kami memastikan semua input divalidasi secara ketat untuk mencegah penyimpanan data berbahaya. Room Database digunakan untuk mengelola operasi database dengan lebih aman, menghindari risiko SQL Injection melalui penggunaan DAO. Untuk penyimpanan file, seperti dokumen Excel dan proses pengiriman data melalui email, kami memastikan data disimpan dan dikirimkan dengan cara yang aman, termasuk penggunaan lokasi penyimpanan yang privat dan protokol transfer data yang aman. Kami juga menghindari penyimpanan data sensitif dalam SharedPreferences tanpa enkripsi dan mempertimbangkan penggunaan Android Keystore untuk manajemen kunci yang aman.
+Every form field is validated before it reaches the database or the network:
 
-## Pembagian Kerja dan Jumlah Jam Persiapan Anggota Kelompok
+- **Email** must match Android's `Patterns.EMAIL_ADDRESS`.
+- **Password** must match `password_` followed by an 8-digit student ID.
+- **Title** is required and limited to 20 characters.
+- **Amount** must be a positive number no greater than 1,000,000,000.
+- **Location** may contain only letters and spaces, up to 200 characters.
 
-| NIM      | Nama                      | Pembagian Pekerjaan                                                          | Jumlah jam persiapan dan pengerjaan |
-| -------- | ------------------------- | ---------------------------------------------------------------------------- | ----------------------------------- |
-| 13521071 | Margaretha Olivia Haryono | Header, Navigation Bar, Login, Setting, Graf, Splash Screen,                 | 40                                  |
-| 13521084 | Austin Gabriel Pardosi    | Room Repository, Twibbon, xlsx, CRUD transaksi, OWASP Analisis               | 40                                  |
-| 13521172 | Nathan Tenka              | API Backend Integration, Scan, Mail, JWT, Deteksi Sinyal, Broadcast Receiver | 40                                  |
+| Screen | Before | After |
+| --- | :---: | :---: |
+| Login | <img src="screenshot/OWASP/m4-login-sebelum.png" width="220" /> | <img src="screenshot/OWASP/m4-login-sesudah.png" width="220" /> |
+| Add Transaction | <img src="screenshot/OWASP/m4-tambahtransaksi-sebelum.png" width="220" /> | <img src="screenshot/OWASP/m4-tambahtransaksi-sesudah.png" width="220" /> |
+
+### M8 · Security Misconfiguration
+
+- Camera and location permissions are requested at runtime, only when a feature needs them.
+- A background service checks the JWT's expiry and signs the user out once it has expired.
+
+| Screen | Permission | Evidence |
+| --- | :---: | :---: |
+| Scan | Camera | <img src="screenshot/OWASP/m8-scan.jpg" width="220" /> |
+| Twibbon | Camera | <img src="screenshot/OWASP/m8-twibbon.jpg" width="220" /> |
+| Add Transaction | Location | <img src="screenshot/OWASP/m8-tambahtransaksi.jpg" width="220" /> |
+
+### M9 · Insecure Data Storage
+
+- All database access goes through Room DAOs with bound parameters, so there is no raw SQL string building.
+- Session data is kept in app-private `SharedPreferences` (`MODE_PRIVATE`).
+- Exported files are shared through a `FileProvider` rather than as raw file paths.
+
+## 👥 Team
+
+| Name | Student ID | Contributions |
+| --- | :---: | --- |
+| Margaretha Olivia Haryono | 13521071 | Header, navigation bar, login, settings, chart, splash screen |
+| [Austin Gabriel Pardosi](https://github.com/AustinPardosi) | 13521084 | Room repository, Twibbon, Excel export, transaction CRUD, OWASP analysis |
+| Nathan Tenka | 13521172 | Backend API integration, receipt scanning, email, JWT, network detection, broadcast receiver |
+
+<div align="center">
+<sub>Built with Kotlin for IF3210 – Platform-Specific Application Development</sub>
+</div>
